@@ -620,6 +620,7 @@ h4 {
 .form-modal {
   padding-left: 40px;
   padding-right: 40px;
+  outline: none;
 }
 h5 {
   font-family: var(--font-primary);
@@ -639,6 +640,7 @@ textarea {
   font-size: 12px;
   letter-spacing: 0.01em;
   line-height: 1.17;
+  outline: none;
 }
 ::placeholder {
   font-family: var(--font-primary);
@@ -682,10 +684,13 @@ h6 {
 
 .input-text:focus,
 .input-text:hover,
+.com:focus,
+.com:hover,
 input:focus,
 input:hover {
   transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   border-color: var(--brand-main-color);
+  transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
 }
 
@@ -737,15 +742,9 @@ input:hover {
   content: '';
   position: absolute;
   display: block;
-  background-image: url('/images/icons.svg#icon-icon-check');
-  background-repeat: no-repeat;
-
-  width: 100%;
-  height: 100%;
 }
 
 .checkbox-label:hover {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-color: var(--brand-main-color);
 }
 
@@ -757,4 +756,9 @@ input:hover {
 
 .checkbox-input:checked + .checkbox-label::after {
   border-color: var(--brand-main-color);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='15' fill='none'%3E%3Crect width='16' height='15' fill='%232196F3' rx='2'/%3E%3Cpath fill='%23fff' stroke='%23fff' stroke-width='.2' d='m3.957 7.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z'/%3E%3C/svg%3E");
+  width: 16px;
+  height: 15px;
+  background-position: right 2px bottom 2px;
+  background-repeat: no-repeat;
 }
