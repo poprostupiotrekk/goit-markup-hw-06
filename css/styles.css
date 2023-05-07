@@ -71,15 +71,18 @@ body {
   display: flex;
   padding: 25px 0;
   align-items: center;
+  justify-content: space-between;
 }
 
 .nav-list-1 {
   display: flex;
   gap: 46px;
   padding-left: 93px;
+  justify-content: space-between;
 }
 .nav-list-2 {
   display: flex;
+  justify-content: space-between;
   gap: 50px;
 }
 
@@ -190,6 +193,7 @@ body {
 .feature-list {
   display: flex;
   gap: 30px;
+  justify-content: space-between;
 }
 .head-1 {
   font-weight: 700;
@@ -212,7 +216,7 @@ body {
 }
 .what-we-do-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 30px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
@@ -222,14 +226,12 @@ body {
 .team {
   background-color: var(--brand-color-grey);
 }
-
 .team-list-element {
   display: flex;
   gap: 30px;
-  justify-content: center;
+  justify-content: space-between;
   padding-top: 50px;
 }
-
 .team-background {
   background-color: var(--brand-color-white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -330,7 +332,6 @@ body {
 .icon-header {
   display: flex;
   justify-content: center;
-  align-content: center;
   align-items: center;
 }
 
@@ -460,6 +461,8 @@ body {
   font-size: 14px;
   font-weight: 700;
 }
+
+/*karty w portfolio*/
 .card {
   position: relative;
 }
@@ -498,46 +501,8 @@ body {
 .product-background:hover .card-description {
   transform: translateY(0);
 }
-.is-hidden {
-  pointer-events: none;
-  visibility: hidden;
-  opacity: 0;
-}
-.backdrop {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  transition: visibility 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 1;
-}
-.modal {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(1) rotate(0deg);
-  background-color: #ffffff;
-  width: 521px;
-  height: 581px;
-  border-radius: 4px;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 8px;
-}
-.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0) rotate(270deg);
-}
-.close-button {
-  display: flex;
-  border-radius: 50%;
-  border-style: none;
-}
-.button-position {
-  display: flex;
-  justify-content: flex-end;
-}
+
+/*Newsletter w stopce */
 .newsletter-mail {
   display: flex;
   background-color: var(--brand-color-background);
@@ -583,6 +548,48 @@ body {
   justify-content: right;
   gap: 12px;
 }
+
+/*Okno modalne*/
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+.backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: visibility 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  background-color: #ffffff;
+  width: 528px;
+  height: 581px;
+  border-radius: 4px;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0) rotate(270deg);
+}
+.close-button {
+  display: flex;
+  border-radius: 50%;
+  border-style: none;
+  margin: 8px;
+}
+.button-position {
+  display: flex;
+  justify-content: flex-end;
+}
 .submit-modal {
   background-color: var(--brand-main-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -606,23 +613,21 @@ h4 {
   line-height: 1.15;
 }
 .submit-pos {
-  padding-top: 30px;
+  padding-top: 32px;
   padding-bottom: 40px;
 }
 .input-text {
   border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  width: 382px;
-  height: 40px;
+  width: 404px;
+  height: 38px;
   padding-left: 42px;
-  padding-right: 12px;
 }
 .form-modal {
   padding-left: 40px;
   padding-right: 40px;
   outline: none;
 }
-h5 {
+.modal-label-title {
   font-family: var(--font-primary);
   font-size: 12px;
   line-height: 1.16;
@@ -652,18 +657,17 @@ textarea {
 .com {
   height: 94px;
   padding: 12px 16px 12px 16px;
-  width: 406px;
+  width: 414px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
-h6 {
+.statement {
+  position: relative;
   font-family: var(--font-primary);
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-align: left;
-
-  padding-top: 20px;
   font-weight: 400;
   color: var(--brand-color-contact);
 }
@@ -685,25 +689,27 @@ h6 {
 .input-text:focus,
 .input-text:hover,
 .com:focus,
-.com:hover,
-input:focus,
-input:hover {
+.com:hover {
   transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   border-color: var(--brand-main-color);
   transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
 }
 
-.label-position {
-  position: relative;
-}
 .icon-modal-position {
   position: absolute;
-  top: 52px;
-  right: 191px;
+  display: flex;
+  bottom: 11px;
+  left: 12px;
+}
+
+.icon-modal {
+  position: relative;
 }
 .icon-modal:focus-within,
-.icon-modal:hover {
+.icon-modal:hover,
+.icon-modal-position:focus-within,
+.icon-modal-position:hover {
   fill: var(--brand-main-color);
   transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -717,9 +723,8 @@ input:hover {
   flex: 0 0 auto;
   width: 16px;
   height: 15px;
-
-  top: 24px;
-  right: 6px;
+  right: 8px;
+  top: 3px;
 }
 
 .checkbox-input {
